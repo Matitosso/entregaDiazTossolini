@@ -1,0 +1,138 @@
+@import "variables";
+@import "header";
+@import "footer";
+@import "mainIndex";
+@import "mainProduc";
+@import "mainTips";
+@import "mainSomos";
+@import "mainCompra";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul{
+    list-style-type: none;
+}
+
+
+body{
+    background-color: #b0f8b0;
+    background-image: url(../iconos/imagenFondo.png);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@media screen and (max-width: 768px){
+      .headerBox{               
+        height: 100 vh;
+        width: 100 vw;
+        font-size: 1.0rem;
+        text-align: center;
+        align-items: flex-end;
+        display: grid;
+        grid-template-columns: 1.5fr auto auto auto auto;
+        grid-template-rows: 200 px;
+        a{
+            background-color: $colorBotonHeader;
+            border: $colorBotonHeader solid 1px;
+        }
+        
+    }
+    .logo{              
+        img{
+            width: 30vw;
+            
+        }
+    }
+    .portada{ 
+        a{
+            font-size: 0.7rem;
+        }                
+        margin-bottom:0px;
+        margin: 10px;           
+    } 
+    .carrusel{
+        height: auto;
+        img{
+            width: 40vw;
+            height: 48vh;
+        }
+        
+    }
+
+    .categorias{
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "catA"
+        "catPI" 
+        "catPE";
+        img{
+        width: 40vw;
+        height: 25vh;        
+        }
+        gap:10px;
+        padding:10px;
+    }
+    .destacados{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "destUno destDos"
+        "destTres destCuatro";
+
+        img{
+            width: 25vw;
+            height: 20vh;
+        }
+        gap:10px;
+        padding:10px;
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    .mainSomos{
+        aside{
+            img{
+                width: 40vw;
+                height: 30vh;
+            }
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    .footerBox{
+        a{
+            font-size: 0.8rem;
+        }
+        em{
+            font-size: 0.9rem;
+        }
+    }
+    .mainProduc{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas:
+        "productUno productDos"
+        "productTres productCuatro"
+        "productCinco productSeis";
+        img{
+            width: 25vw;
+            height: 20vh;
+        }
+        gap:10px;
+        padding:10px;
+        p{
+            font-size: 1rem;
+        }
+    }
+    .infoCompra{
+        margin-left: 20px;
+    }
+        
+}
